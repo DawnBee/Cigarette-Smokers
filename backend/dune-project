@@ -1,0 +1,12 @@
+(lang dune 3.16)
+(name backend)
+(version 0.1.0)
+(license MIT)
+(authors "John Lloyd Balingit")
+(maintainers "johnbalingit013@gmail.com")
+
+(generate_opam_files true)  ; Optional: to generate an .opam file for dependency management
+
+(package
+ (name backend)
+ (synopsis "Backend server using Dream and OCaml"))
