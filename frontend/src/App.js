@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { startSimulation } from './api';
 
 function App() {
+  const [message, setMessage] = useState('');
+
+  const handleStartSimulation = async () => {
+    try {
+      const data = await startSimulation();
+      setMessage(data.message);
+    } catch (error) {
+      setMessage('Failed to start simulation');
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Cigarette Smokers!</h1>
+      <button onClick={handleStartSimulation}>Start Simulation</button>
+      <p>{message}</p>
     </div>
   );
 }
