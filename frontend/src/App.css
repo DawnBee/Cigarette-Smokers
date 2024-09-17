@@ -1,38 +1,36 @@
-.App {
+.cigar {
+  top: 2%;
+  left: 5%;
+  width: 250px;
+  aspect-ratio: 1;
+  position: absolute;
+}
+
+.container {
+  border: none;
+  border-radius: 5px;
+  background: #fff;
   text-align: center;
+  padding: 1em 1.5em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start-btn {  
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: .5rem 1rem;
+  background: #1cb636;
+  font-family: "Verdana", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-btn:hover {
+  cursor: pointer;
+  background: #47038a;
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.msg {
+  color: red;
 }

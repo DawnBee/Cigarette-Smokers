@@ -2,6 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import { startSimulation } from './api';
 
+// Asset Import
+import cigarImage from './assets/cigar.png';
+
 function App() {
   const [message, setMessage] = useState('');
 
@@ -15,11 +18,15 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Cigarette Smokers!</h1>
-      <button onClick={handleStartSimulation}>Start Simulation</button>
-      <p>{message}</p>
-    </div>
+    <>
+      <img className="cigar" src={cigarImage} alt="cigar-image"/>
+      <div className="container">
+        <h1>Cigarette Smokers!</h1>
+        <button className="start-btn" onClick={handleStartSimulation}>Start Simulation</button>
+        <p className="msg">{message}</p>
+      </div>
+    </>
+
   );
 }
 
